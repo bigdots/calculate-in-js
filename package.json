@@ -1,6 +1,6 @@
 {
   "name": "arithmetic.js",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "deal with precision for js calculate",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "precision"
   ],
   "author": "和霁",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",

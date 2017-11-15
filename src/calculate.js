@@ -1,24 +1,26 @@
-
+/**
+ * 利用字符串去除小数点
+ * @param {*} arg 待处理的数据
+ * @return {*} numString 去除小数点转化得到的整数
+ * @return {*} decimalLen 数字精度
+ */
 function numToString(arg) {
-  let l;
+  let l, numString;
   try {
-    l = arg.toString().split(".")[1].length;
+    numString = arg.toString();
+    l = numString.split(".")[1].length;
   } catch (e) {
     l = 0;
   }
 
   return {
-    numString: Number(arg.toString().replace(".", "")),
+    numString: Number(numString.replace(".", "")),
     decimalLen: l
   };
 }
 
-
-
 class Calculate {
-
   add(arg1, arg2) {
-    // 利用字符串去除小数点，给小数位少的数字补全位数，求出俩个数字最后需要除以的位数
     let argR1 = numToString(arg1);
     let argR2 = numToString(arg2);
 
@@ -51,14 +53,13 @@ class Calculate {
     //cm：俩数小数点位数之差*10
     if (c > 0) {
       var cm = Math.pow(10, c);
-      r1 > r2 ? (num2 = num2 * cm) : (num1 = num1 * cm);
+      l1 > l2 ? (num2 = num2 * cm) : (num1 = num1 * cm);
     }
 
     return (num1 - num2) / m;
   }
 
   multiply(arg1, arg2) {
-    // 利用字符串去除小数点，求出俩个数字最后需要除以的位数
     let argR1 = numToString(arg1);
     let argR2 = numToString(arg2);
 
@@ -73,7 +74,6 @@ class Calculate {
   }
 
   divide(arg1, arg2) {
-    // 利用字符串去除小数点，求出俩个数字最后需要除以的位数
     let argR1 = numToString(arg1);
     let argR2 = numToString(arg2);
 
@@ -84,7 +84,9 @@ class Calculate {
 
     let m = l2 - l1;
 
-    return num1 / num2 * Math.pow(10, m);
+    return m >= 0
+      ? num1 * Math.pow(10, m) / num2
+      : num1 / (num2 * Math.pow(10, c));
   }
 }
 
