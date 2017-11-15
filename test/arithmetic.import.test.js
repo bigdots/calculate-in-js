@@ -1,8 +1,11 @@
-import calculator from "../index";
+import Arithmetic from "../index";
 
 import { expect } from "chai";
 
-const { add, subtract, multiply, divide } = calculator;
+
+console.error(Arithmetic);
+
+const { add, subtract, multiply, divide } = Arithmetic;
 
 describe("加法函数的测试", function() {
   it("0.1 +  0.2 = 0.3", function() {

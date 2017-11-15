@@ -19,7 +19,7 @@ function numToString(arg) {
   };
 }
 
-class Calculate {
+class Arithmetic {
   add(arg1, arg2) {
     let argR1 = numToString(arg1);
     let argR2 = numToString(arg2);
@@ -90,6 +90,8 @@ class Calculate {
   }
 }
 
-const calculator = new Calculate();
+// export const calculator = new Calculate();
 
-export default calculator;
+module.exports = new Arithmetic();
+
+// export default calculator;

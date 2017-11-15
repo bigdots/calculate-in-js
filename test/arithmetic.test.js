@@ -1,18 +1,13 @@
-var cal = require("../index");
+var Arithmetic = require("../index");
 
 var chai = require("chai");
 
-console.error(cal)
-
 var expect = chai.expect;
 
-
-// const {add,subtract,multiply,divide} = calculator;
-
-var add = cal.add,
-  subtract = cal.subtract,
-  multiply = cal.multiply,
-  divide = cal.divide;
+var add = Arithmetic.add,
+  subtract = Arithmetic.subtract,
+  multiply = Arithmetic.multiply,
+  divide = Arithmetic.divide;
 
 describe("加法函数的测试", function() {
   it("0.1 加 0.2 应该等于 0.3", function() {

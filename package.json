@@ -1,11 +1,11 @@
 {
   "name": "arithmetic.js",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "deal with precision for js calculate",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/build.test.js",
-    "build": "babel src -d lib -s && babel ./test/calculate.test.js -o ./test/build.test.js"
+    "test": "mocha ./test/arithmetic.test.js",
+    "build": " rm -r -f ./lib &&  babel src -d lib -s && babel ./test/arithmetic.import.test.js -o ./test/build.test.js"
   },
   "keywords": [
     "js",

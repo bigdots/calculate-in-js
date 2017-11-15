@@ -8,6 +8,8 @@ var _chai = require("chai");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+console.error(_index2.default);
+
 var add = _index2.default.add,
     subtract = _index2.default.subtract,
     multiply = _index2.default.multiply,
