@@ -83,7 +83,7 @@ class Arithmetic {
       l2 = argR2.decimalLen;
 
     let m = l2 - l1;
-
+    let c = Math.abs(m)
     return m >= 0
       ? num1 * Math.pow(10, m) / num2
       : num1 / (num2 * Math.pow(10, c));
