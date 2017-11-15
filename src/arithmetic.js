@@ -34,7 +34,7 @@ class Arithmetic {
     //cm：俩数小数点位数之差*10
     if (c > 0) {
       var cm = Math.pow(10, c);
-      r1 > r2 ? (num2 = num2 * cm) : (num1 = num1 * cm);
+      l1 > l2 ? (num2 = num2 * cm) : (num1 = num1 * cm);
     }
     return (num1 + num2) / m;
   }
@@ -90,8 +90,4 @@ class Arithmetic {
   }
 }
 
-// export const calculator = new Calculate();
-
 module.exports = new Arithmetic();
-
-// export default calculator;
