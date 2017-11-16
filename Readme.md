@@ -21,12 +21,10 @@ arithmetic.js is easiest to use when installed with npm:
 npm install arithmetic.js
 ```
 
-Then you can load the module into your code with a `import` or `require` call:
+Then you can load the module into your code with a `require` call:
 
 ```js
-import Arithmetic from "arithmetic.js";
-
-var Arithmetic = require("../index");
+var Arithmetic = require("arithmetic.js");
 ```
 Now, you can use it:
 

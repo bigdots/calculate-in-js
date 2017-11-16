@@ -1,6 +1,6 @@
 {
   "name": "arithmetic.js",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "deal with precision for js calculate",
   "main": "index.js",
   "scripts": {
