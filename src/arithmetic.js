@@ -1,9 +1,7 @@
-
 /**
  * @author 和霁
  * @date 2017-11-15
  */
-
 
 class Arithmetic {
     constructor(num) {
@@ -19,6 +17,14 @@ class Arithmetic {
      * -----------------------------------------------------------------
      */
     _numToString(arg) {
+        if (typeof arg === "undefined") {
+            throw "parameters are missing";
+        }
+
+        if (typeof arg !== "number") {
+            throw `${arg} is not a number `;
+        }
+
         let l, numString;
         try {
             numString = arg.toString();
@@ -36,8 +42,8 @@ class Arithmetic {
     add(num) {
         let next = this._numToString(num);
 
-        const { numString: n1, decimalLen: l1 } = this.current;
-        const { numString: n2, decimalLen: l2 } = next;
+        let { numString: n1, decimalLen: l1 } = this.current;
+        let { numString: n2, decimalLen: l2 } = next;
 
         let c = Math.abs(l1 - l2);
         let m = Math.pow(10, Math.max(l1, l2));
@@ -60,8 +66,8 @@ class Arithmetic {
     mul(num) {
         let next = this._numToString(num);
 
-        const { numString: n1, decimalLen: l1 } = this.current;
-        const { numString: n2, decimalLen: l2 } = next;
+        let { numString: n1, decimalLen: l1 } = this.current;
+        let { numString: n2, decimalLen: l2 } = next;
 
         let m = l1 + l2;
 
@@ -75,8 +81,8 @@ class Arithmetic {
     div(num) {
         let next = this._numToString(num);
 
-        const { numString: n1, decimalLen: l1 } = this.current;
-        const { numString: n2, decimalLen: l2 } = next;
+        let { numString: n1, decimalLen: l1 } = this.current;
+        let { numString: n2, decimalLen: l2 } = next;
 
         let m = l2 - l1;
         let c = Math.abs(m);
@@ -95,5 +101,3 @@ class Arithmetic {
 }
 
 export default Arithmetic;
-
-// module.exports = new Arithmetic();
