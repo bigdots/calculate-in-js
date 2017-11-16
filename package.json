@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test/arithmetic.test.js",
-    "build": " rm -r -f ./lib &&  babel src -d lib -s && babel ./test/arithmetic.import.test.js -o ./test/build.test.js"
+    "build": " rm -r -f ./lib &&  babel src -d lib -s"
   },
   "keywords": [
     "js",
