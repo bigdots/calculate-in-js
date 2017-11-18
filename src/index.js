@@ -3,10 +3,20 @@
  * @date 2017-11-15
  */
 
-//  再增加一个功能，支持单链调用;
+import arithmetic from "./arithmetic";
+import accNumber from "./accNumber";
 
-import Arithmetic from "./arithmetic";
 
-module.exports = function(arg) {
-    return new Arithmetic(arg);
+
+module.exports = {
+    accNumber,
+    arithmetic
 };
+
+// module.exports = arithmetic;
+
+// export default Arithmetic;
+
+// export default AccNumber;
+
+// module.exports = 
