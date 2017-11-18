@@ -11,23 +11,16 @@ class Arithmetic {
 
     /**
      * 利用字符串去除小数点
-     * @param {*} arg 待处理的数据
+     * @param {*} num 待处理的数据
      * @return {*} numString 去除小数点转化得到的整数
      * @return {*} decimalLen 数字精度
      * -----------------------------------------------------------------
      */
-    _numToString(arg) {
-        if (typeof arg === "undefined") {
-            throw "parameters are missing";
-        }
-
-        if (typeof arg !== "number") {
-            throw `${arg} is not a number `;
-        }
-
+    _numToString(num) {
+        this._argCheck(num);
         let l, numString;
         try {
-            numString = arg.toString();
+            numString = num.toString();
             l = numString.split(".")[1].length;
         } catch (e) {
             l = 0;
@@ -39,7 +32,18 @@ class Arithmetic {
         };
     }
 
+    _argCheck(arg) {
+        if (typeof arg === "undefined") {
+            throw "parameters are missing";
+        }
+
+        if (typeof arg !== "number") {
+            throw `${arg} is not a number `;
+        }
+    }
+
     add(num) {
+        this._argCheck(num);
         let next = this._numToString(num);
 
         let { numString: n1, decimalLen: l1 } = this.current;
@@ -60,10 +64,12 @@ class Arithmetic {
     }
 
     sub(num) {
+        this._argCheck(num);
         this.add(-num);
     }
 
     mul(num) {
+        this._argCheck(num);
         let next = this._numToString(num);
 
         let { numString: n1, decimalLen: l1 } = this.current;
@@ -79,6 +85,7 @@ class Arithmetic {
     }
 
     div(num) {
+        this._argCheck(num);
         let next = this._numToString(num);
 
         let { numString: n1, decimalLen: l1 } = this.current;
