@@ -5,10 +5,10 @@
 
 import _numToString from './numTostring';
 
-class AccNumber {
+class CalChain {
     constructor(num) {
         this.value = num;
-        this.current = this._numToString(num);
+        this.current = _numToString(num);
     }
 
     _argCheck(arg) {
@@ -23,7 +23,7 @@ class AccNumber {
 
     add(num) {
         this._argCheck(num);
-        let next = this._numToString(num);
+        let next = _numToString(num);
 
         let { intNum: n1, precision: l1 } = this.current;
         let { intNum: n2, precision: l2 } = next;
@@ -37,19 +37,19 @@ class AccNumber {
         }
         this.value = (n1 + n2) / m;
 
-        this.current = this._numToString(this.value);
+        this.current = _numToString(this.value);
 
         return this;
     }
 
     sub(num) {
         this._argCheck(num);
-        this.add(-num);
+        return this.add(-num);
     }
 
     mul(num) {
         this._argCheck(num);
-        let next = this._numToString(num);
+        let next = _numToString(num);
 
         let { intNum: n1, precision: l1 } = this.current;
         let { intNum: n2, precision: l2 } = next;
@@ -58,14 +58,14 @@ class AccNumber {
 
         this.value = n1 * n2 / Math.pow(10, m);
 
-        this.current = this._numToString(this.value);
+        this.current = _numToString(this.value);
 
         return this;
     }
 
     div(num) {
         this._argCheck(num);
-        let next = this._numToString(num);
+        let next = _numToString(num);
 
         let { intNum: n1, precision: l1 } = this.current;
         let { intNum: n2, precision: l2 } = next;
@@ -76,7 +76,7 @@ class AccNumber {
         this.value =
             m >= 0 ? n1 * Math.pow(10, m) / n2 : n1 / (n2 * Math.pow(10, c));
 
-        this.current = this._numToString(this.value);
+        this.current = _numToString(this.value);
 
         return this;
     }
@@ -87,5 +87,5 @@ class AccNumber {
 }
 
 export default function(num){
-    return new AccNumber(num);
+    return new CalChain(num);
 };

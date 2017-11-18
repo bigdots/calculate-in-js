@@ -16,7 +16,7 @@ export default function numToString(num) {
     }
 
     return {
-        intNum: Number(numString.replace(".", "")),
+        intNum: Number(numString.replace(".", "")).toFixed(0),
         precision
     };
 }

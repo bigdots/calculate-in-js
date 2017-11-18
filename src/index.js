@@ -3,20 +3,12 @@
  * @date 2017-11-15
  */
 
-import arithmetic from "./arithmetic";
-import accNumber from "./accNumber";
+import calSimple from "./CalSimple";
+import calChain from "./CalChain";
 
 
 
 module.exports = {
-    accNumber,
-    arithmetic
+    calSimple,
+    calChain
 };
-
-// module.exports = arithmetic;
-
-// export default Arithmetic;
-
-// export default AccNumber;
-
-// module.exports = 
