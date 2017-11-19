@@ -1,16 +1,17 @@
 {
   "name": "arithmetic.js",
   "version": "1.0.0",
-  "description": "deal with precision for js calculate",
+  "description": "deal with precision for arithematic in js",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test/*.js",
-    "build": " rm -r -f ./lib && babel src -d lib -s"
+    "build": " rm -r -f ./lib && babel src -d lib"
   },
   "keywords": [
     "js",
     "calculate",
-    "precision"
+    "precision",
+    "arithematic"
   ],
   "author": "和霁",
   "license": "MIT",
