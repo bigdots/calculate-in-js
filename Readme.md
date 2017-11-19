@@ -1,7 +1,7 @@
 
 # arithmetic.js
 
-A small library for mathematical operation in Javascript. only include:
+A small library for mathematical operation in Javascript. only support:
 
 + add (+)
 + sub (-)
