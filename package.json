@@ -1,6 +1,6 @@
 {
   "name": "arithmetic.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "deal with precision for arithematic in js",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,9 @@
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
     "mocha": "^4.0.1"
+  },
+  "repository" :{
+    "type" : "git",
+    "url" : "https://github.com/bigdots/js-arithmetic.git"
   }
 }
