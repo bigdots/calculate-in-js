@@ -5,7 +5,7 @@
 
 import _numToString from './numTostring';
 
-class CalChain {
+class ChainCal {
     constructor(num) {
         this.value = num;
         this.current = _numToString(num);
@@ -87,5 +87,5 @@ class CalChain {
 }
 
 export default function(num){
-    return new CalChain(num);
+    return new ChainCal(num);
 };

@@ -5,7 +5,7 @@
 
 import _numToString from "./numTostring";
 
-class CalSimple {
+class SmpCal {
     add = (arg1, arg2) => {
         let argR1 = _numToString(arg1);
         let argR2 = _numToString(arg2);
@@ -19,11 +19,12 @@ class CalSimple {
             var cm = Math.pow(10, c);
             p1 > p2 ? (n2 = n2 * cm) : (n1 = n1 * cm);
         }
+
         return (n1 + n2) / m;
     };
 
     sub = (arg1, arg2) => {
-        return this.add(arg1, Number(-arg2));
+        return this.add(arg1, -arg2);
     };
 
     mul = (arg1, arg2) => {
@@ -49,4 +50,4 @@ class CalSimple {
     };
 }
 
-module.exports = new CalSimple();
+module.exports = new SmpCal();

@@ -3,12 +3,12 @@
  * @date 2017-11-15
  */
 
-import calSimple from "./CalSimple";
-import calChain from "./CalChain";
+import smpCal from "./smpCal";
+import chainCal from "./chainCal";
 
 
 
 module.exports = {
-    calSimple,
-    calChain
+    smpCal,
+    chainCal
 };

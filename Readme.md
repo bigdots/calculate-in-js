@@ -1,12 +1,12 @@
 
-# Arithmetic.js
+# arithmetic.js
 
 A small library for mathematical operation in Javascript. only include:
 
-+ add
-+ subtract
-+ multiply
-+ divide
++ add (+)
++ sub (-)
++ mul (*)
++ div (/)
 
 
 [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
@@ -24,18 +24,33 @@ npm install arithmetic.js
 Then you can load the module into your code with a `import` or `require` call:
 
 ```js
-import Arithmetic from "arithmetic.js";
+import arithmetic from "arithmetic.js";
 
-var Arithmetic = require("../index");
+var arithmetic = require("../index");
 ```
+
 Now, you can use it:
 
 ```js
-Arithmetic.add(0.1,0.2) //0.3
-Arithmetic.subtract(2,1) //3
-Arithmetic.multiply(2,2) //4
-Arithmetic.divide(6,3) //2
+
+var smpCal = arithmetic.smpCal;
+
+smpCal.add(0.1,0.2) //0.3
+smpCal.sub(2,1) //3
+smpCal.mul(2,2) //4
+smpCal.div(6,3) //2
 ```
+
+```js
+var chainCal = arithmetic.chainCal;
+
+// (3 + 0.2 - 1)/4*5
+chainCal(3).add(0.2).sub(1).div(4).mul(5).getValue(); // 2.75
+```
+
+
+## Note
+arithmetic.js do not support big Number;
 
 ## License
 MIT
