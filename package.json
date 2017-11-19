@@ -1,16 +1,17 @@
 {
   "name": "arithmetic.js",
-  "version": "1.0.0",
-  "description": "deal with precision for js calculate",
+  "version": "1.0.1",
+  "description": "deal with precision for arithematic in js",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test/*.js",
-    "build": " rm -r -f ./lib && babel src -d lib -s"
+    "build": " rm -r -f ./lib && babel src -d lib"
   },
   "keywords": [
     "js",
     "calculate",
-    "precision"
+    "precision",
+    "arithematic"
   ],
   "author": "和霁",
   "license": "MIT",
@@ -20,5 +21,9 @@
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
     "mocha": "^4.0.1"
+  },
+  "repository" :{
+    "type" : "git",
+    "url" : "https://github.com/bigdots/js-arithmetic.git"
   }
 }

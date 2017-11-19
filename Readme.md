@@ -54,7 +54,7 @@ chainCal(3).add(0.2).sub(1).div(4).mul(5).getValue(); // 2.75
 
 
 ## Note
-arithmetic.js do not support big Number;
+arithmetic.js do not support big number;
 
 ## License
 MIT
