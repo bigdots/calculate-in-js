@@ -1,3 +1,1 @@
-
-
-module.exports = require("./lib/arithmetic");
+module.exports = require("./lib/index");

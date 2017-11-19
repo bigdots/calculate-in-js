@@ -1,11 +1,11 @@
 {
   "name": "arithmetic.js",
-  "version": "0.1.8",
+  "version": "1.0.0",
   "description": "deal with precision for js calculate",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/arithmetic.test.js",
-    "build": " rm -r -f ./lib &&  babel src -d lib -s && babel ./test/arithmetic.import.test.js -o ./test/build.test.js"
+    "test": "mocha ./test/*.js",
+    "build": " rm -r -f ./lib && babel src -d lib -s"
   },
   "keywords": [
     "js",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
     "mocha": "^4.0.1"
   }
