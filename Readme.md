@@ -14,21 +14,21 @@ A small library for mathematical operation in Javascript. only support:
 
 ## Usage
 
-### arithmetic.js is easiest to use when installed with npm:
+#### arithmetic.js is easiest to use when installed with npm:
 
 ```cmd
 npm install arithmetic.js --save
 ```
 
-### Then you can load the module into your code with a `import` or `require` call:
+#### Then you can load the module into your code with a `import` or `require` call:
 
 ```js
 import arithmetic from "arithmetic.js";
 // or
-var arithmetic = require("../index");
+var arithmetic = require("arithmetic.js");
 ```
 
-### Now, there're two methods for you to do the mathematics:
+#### Now, there're two methods for you to do the mathematics:
 
 1. smpCal
 
