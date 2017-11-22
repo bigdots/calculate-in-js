@@ -8,7 +8,7 @@ import chainCal from "./chainCal";
 
 
 
-module.exports = {
+export default {
     smpCal,
     chainCal
-};
+}

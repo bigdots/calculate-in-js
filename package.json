@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test/*.js",
+    "watch": "tsc --watch",
     "build": " rm -r -f ./lib && babel src -d lib"
   },
   "keywords": [
@@ -20,10 +21,11 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "typescript": "^2.6.1"
   },
-  "repository" :{
-    "type" : "git",
-    "url" : "https://github.com/bigdots/js-arithmetic.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bigdots/js-arithmetic.git"
   }
 }
