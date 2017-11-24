@@ -4,4 +4,8 @@ class SmpCal extends Calculate{
     constructor(){
         super()
     }
+
 };
+
+
+export default SmpCal;
