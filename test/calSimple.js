@@ -1,5 +1,9 @@
-var arithmetic = require("arithmetic.js");
+var arithmetic = require("../index");
 var smpCal = arithmetic.smpCal;
+
+
+console.error(arithmetic)
+console.error(smpCal.add)
 
 var chai = require("chai");
 var expect = chai.expect;

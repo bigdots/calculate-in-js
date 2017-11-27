@@ -6,8 +6,6 @@
 import smpCal from "./smpCal";
 import chainCal from "./chainCal";
 
-
-
 export default {
     smpCal,
     chainCal

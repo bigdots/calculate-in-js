@@ -5,7 +5,22 @@ class SmpCal extends Calculate{
         super()
     }
 
+    add(arg1: number, arg2: number) {
+        return super.sum(arg1, arg2)
+    }
+
+    subtract(arg1: number, arg2: number) {
+        return super.subtract(arg1, arg2)
+    }
+
+    mul(arg1: number, arg2: number) {
+        return super.multiply(arg1, arg2)
+    }
+
+    div(arg1: number, arg2: number) {
+        return super.divide(arg1, arg2)
+    }
 };
 
 
-export default SmpCal;
+export default new SmpCal();

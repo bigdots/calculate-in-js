@@ -7,16 +7,29 @@ import Calculate from "./calculate";
 
 class ChainCal extends Calculate {
     private value: number;
-    // private current: any;
 
     constructor(num: number) {
         super();
-        // this.value = num;
-        // this.current = _numToString(num);
     }
 
-    add(arg1 = this.value, arg2: number) {
-         this.value= super.add(arg1, arg2);
+    add(arg: number) {
+        this.value= super.sum(this.value, arg);
+        return this;
+    }
+
+    sub(arg: number) {
+        this.value= super.subtract(this.value, arg);
+        return this;
+    }
+
+    mul(arg: number) {
+        this.value= super.multiply(this.value, arg);
+        return this;
+    }
+
+    div(arg: number) {
+        this.value= super.divide(this.value, arg);
+        return this;
     }
 
     getValue() {

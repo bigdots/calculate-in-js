@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha ./test/*.js",
     "watch": "tsc --watch",
-    "build": " rm -r -f ./lib && babel src -d lib"
+    "build": " rm -r -f ./lib && tsc"
   },
   "keywords": [
     "js",

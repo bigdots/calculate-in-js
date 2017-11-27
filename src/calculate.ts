@@ -3,8 +3,10 @@
  * @date 2017-11-15
  */
 
+// sum, subtract, multiply and divide
+
 class Calculate {
-    private _numToString(num: number) {
+    protected _numToString(num: number) {
         let precision: number, numString: string;
         try {
             numString = num.toString();
@@ -19,7 +21,7 @@ class Calculate {
         };
     }
 
-    add(arg1: number, arg2: number) {
+    sum(arg1: number, arg2: number) {
         let argR1 = this._numToString(arg1);
         let argR2 = this._numToString(arg2);
         let { intNum: n1, precision: p1 } = argR1;
@@ -36,11 +38,11 @@ class Calculate {
         return (n1 + n2) / m;
     }
 
-    sub(arg1: number, arg2: number) {
-        return this.add(arg1, -arg2);
+    subtract(arg1: number, arg2: number) {
+        return this.sum(arg1, -arg2);
     }
 
-    mul(arg1: number, arg2: number) {
+    multiply(arg1: number, arg2: number) {
         let argR1 = this._numToString(arg1);
         let argR2 = this._numToString(arg2);
         let { intNum: n1, precision: p1 } = argR1;
@@ -51,7 +53,7 @@ class Calculate {
         return n1 * n2 / Math.pow(10, m);
     }
 
-    div(arg1: number, arg2: number) {
+    divide(arg1: number, arg2: number) {
         let argR1 = this._numToString(arg1);
         let argR2 = this._numToString(arg2);
         let { intNum: n1, precision: p1 } = argR1;
