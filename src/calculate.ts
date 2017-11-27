@@ -6,10 +6,11 @@
 // sum, subtract, multiply and divide
 
 class Calculate {
-    protected _numToString(num: number) {
+    _numToString(num: number) {
         let precision: number, numString: string;
+        numString = num.toString();
+
         try {
-            numString = num.toString();
             precision = numString.split(".")[1].length;
         } catch (e) {
             precision = 0;

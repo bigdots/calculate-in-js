@@ -6,10 +6,11 @@
 import Calculate from "./calculate";
 
 class ChainCal extends Calculate {
-    private value: number;
+    value: number;
 
     constructor(num: number) {
         super();
+        this.value = num;
     }
 
     add(arg: number) {
