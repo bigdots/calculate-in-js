@@ -1,8 +1,10 @@
-var arithmetic = require("arithmetic.js");
+var arithmetic = require("../index");
 var chainCal = arithmetic.chainCal;
 
 var chai = require("chai");
 var expect = chai.expect;
+
+console.error(chainCal(3).add)
 
 describe("测试 chainCal", function() {
     it("(3 + 0.2 - 1)/4*5 = 2.75", function() {

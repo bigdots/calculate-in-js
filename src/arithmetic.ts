@@ -6,9 +6,9 @@
 import smpCal from "./smpCal";
 import chainCal from "./chainCal";
 
-
-
-module.exports = {
+export default {
     smpCal,
     chainCal
-};
+}
+
+
