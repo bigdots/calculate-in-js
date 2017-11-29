@@ -6,7 +6,7 @@
 import Calculate from "./calculate";
 
 class ChainCal extends Calculate {
-    value: number;
+    private value: number;
 
     constructor(num: number) {
         super();
