@@ -25,7 +25,7 @@ npm install arithmetic.js --save
 ```js
 import arithmetic from "arithmetic.js";
 // or
-var arithmetic = require("../index");
+var arithmetic = require("arithmetic.js");
 ```
 
 ### Now, there're two methods for you to do the mathematics:
